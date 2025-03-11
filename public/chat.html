@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat - STRANGER</title>
+    <link rel="shortcut icon" href="./media/icon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./chat.css">
+</head>
+
+<body>
+    <header>
+
+        <a onclick="window.location.href='index.html'" style="cursor: pointer;"><img src="./media/logo.svg" alt="logo"></a>
+
+    </header>
+    <div id="chat">
+        <div id="status"></div>
+        <div id="messages"></div>
+        <form id="messageForm">
+            <button type="button" id="terminateChatButton">Buscar nuevo chat</button>
+            <button type="button" id="newPartnerButton" style="display: none;">Buscar otra pareja</button>
+            <input id="messageInput" type="text" autocomplete="off" placeholder="Escribe tu mensaje..." required />
+            <button type="submit" id="sendMessageButton">Enviar<br>( Presiona "Enter" )</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
